@@ -23,11 +23,11 @@ table {
 }
 
 td, th {
-  border: 1px solid #b84646;
+  border: 1px solid #6646b8;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #f47e7e;
+  background-color: #7ef4b5;
 }

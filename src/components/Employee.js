@@ -3,33 +3,38 @@ import {useState,useEffect} from 'react'
 
 
 function Employees() {
-  const [employee,setEmployee] = useState([])
+  const [employees,setEmployees] = useState([])
+
 
   useEffect(()=>{
+    fetchRegister()
+  })
+
+  const fetchRegister=()=>{
     fetch('http://127.0.0.1:8000/register/',{
       'method':'GET',
       headers: {
         'Content-Type' : 'application/json',
       }
     })
-    .then(resp=>resp.json())
-    .then(employee=>{
-      setEmployee(employee);
-      console.log(employee);
+    .then(res=>res.json())
+    .then(res=>{
+      setEmployees(res)
+      console.log(res)
 
     })
     .catch(error=>console.log(error))
     
-  },[])
+  }
 
 
     
   return (
     <div>
               
-        <h1>List Of Employees</h1>
+        <h1>Employees</h1>
 
-<div>
+   <div>
   
   <table>
   <tr>
@@ -44,17 +49,17 @@ function Employees() {
 
 </tr>
  <tbody>
-   {employee.map((employee) =>
+   {employees.map((emp) =>
 
           <tr>
-          <td>{employee.first_name}</td>
-          <td>{employee.second_name}</td>
-          <td>{employee.date_of_graduation}</td>
-          <td>{employee.date_of_employment}</td>
-          <td>{employee.position}</td>
-          <td>{employee.salary}</td>
-          <td>{employee.supervisor}</td>
-          <td>{employee.employee_code}</td>
+          <td>{emp.first_name}</td>
+          <td>{emp.second_name}</td>
+          <td>{emp.date_of_graduation}</td>
+          <td>{emp.date_of_employment}</td>
+          <td>{emp.position}</td>
+          <td>{emp.salary}</td>
+          <td>{emp.supervisor}</td>
+          <td>{emp.employee_code}</td>
           </tr>
                     
     )}

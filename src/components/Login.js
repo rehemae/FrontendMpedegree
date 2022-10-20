@@ -26,7 +26,6 @@ function Login() {
   const Loginbtn = () =>{
     ApiService.LoginUser({username,password})
     .then(resp=>{ 
-      // setToken('mytoken',resp)
       navigate('/employee')
 
     })
