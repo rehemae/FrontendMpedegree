@@ -4,7 +4,7 @@
 
 
 .App-link {
-  color: #61dafb;
+  color: hsl(109, 95%, 68%);
 }
 
 @keyframes App-logo-spin {
@@ -23,11 +23,11 @@ table {
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #b84646;
   text-align: left;
   padding: 8px;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #f47e7e;
 }

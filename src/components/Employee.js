@@ -34,7 +34,7 @@ function Employees() {
   <table>
   <tr>
     <th>First Name</th>
-    <th>Middle Name</th>
+    <th>Second Name</th>
     <th>Date Of Graduation</th>
     <th>Date Of Employment</th>
     <th>Position</th>
@@ -48,7 +48,7 @@ function Employees() {
 
           <tr>
           <td>{employee.first_name}</td>
-          <td>{employee.middle_name}</td>
+          <td>{employee.second_name}</td>
           <td>{employee.date_of_graduation}</td>
           <td>{employee.date_of_employment}</td>
           <td>{employee.position}</td>

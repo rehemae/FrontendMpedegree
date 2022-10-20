@@ -26,7 +26,7 @@ function Login() {
   const Loginbtn = () =>{
     ApiService.LoginUser({username,password})
     .then(resp=>{ 
-      setToken('mytoken',resp)
+      // setToken('mytoken',resp)
       navigate('/employee')
 
     })
@@ -38,7 +38,7 @@ function Login() {
   }
   return (
     <div className='App'>
-        <h1>Please Log In</h1>
+        <h1>Login</h1>
         <div className='mb-3'>
           <form onSubmit={handleSubmit}>
           <label htmlFor='username' className='form-label'>Username</label>
